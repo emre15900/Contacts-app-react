@@ -9,6 +9,11 @@ function Form() {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    if(form.fullname === "" || form.phone_number === ""){
+      return false;
+    }
+    
     console.log(form)
   }
 
