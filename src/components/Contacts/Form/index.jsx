@@ -14,7 +14,8 @@ function Form({ addContact, contacts }) {
     }
 
     addContact([...contacts, form]);
-    console.log(form);
+    
+    setForm({ fullname: "", phone_number: "" });
   };
 
   return (
@@ -23,6 +24,7 @@ function Form({ addContact, contacts }) {
         <input
           name="fullname"
           placeholder="Full Name"
+          value={form.fullname}
           onChange={onChangeInput}
         />
       </div>
@@ -30,6 +32,7 @@ function Form({ addContact, contacts }) {
         <input
           name="phone_number"
           placeholder="Phone Number"
+          value={form.phone_number}
           onChange={onChangeInput}
         />
       </div>
