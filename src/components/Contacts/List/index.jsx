@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-function List() {
+function List({ contacts }) {
   return (
-    <div>List</div>
-  )
+    <div>
+      <ul>
+        {contacts.map((contact, i) => (
+          <li key={i}>{contact.fullname}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default List
+export default List;
