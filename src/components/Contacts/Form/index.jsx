@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Form() {
+function Form({addContact, contacts}) {
 
   const [form, setForm] = useState({ fullname: "", phone_number: "" });
   const onChangeInput = (e) => {
@@ -14,6 +14,7 @@ function Form() {
       return false;
     }
     
+    addContact([...contacts, form]);
     console.log(form)
   }
 
